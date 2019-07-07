@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BattleController">
+   <children>
+      <SplitPane orientation="VERTICAL" prefHeight="716.0" prefWidth="1002.0">
+         <items>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <SplitPane orientation="VERTICAL" prefHeight="716.0" prefWidth="1002.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <SplitPane dividerPositions="0.5" prefHeight="503.0" prefWidth="819.0" SplitPane.resizableWithParent="false">
+                           <items>
+                              <AnchorPane prefHeight="564.0" prefWidth="492.0" SplitPane.resizableWithParent="false">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="376.0" text="BATTLESHIP">
+                                       <font>
+                                          <Font name="Gill Sans Ultra Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane layoutX="22.0" layoutY="473.0" prefHeight="176.0" prefWidth="436.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="185.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="134.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="107.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Carrier, with five holes" />
+                                          <Label text="Battleship, with four holes" GridPane.rowIndex="1" />
+                                          <Label text="Cruiser, with three holes" GridPane.rowIndex="2" />
+                                          <Label text="Submarine, with three holes" GridPane.rowIndex="3" />
+                                          <Label text="Destroyer, with two holes" GridPane.rowIndex="4" />
+                                          <Button fx:id="carrier" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="battleShip" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="cruiser" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="subMarine" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="destroyer" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                    <Label fx:id="MyShipLabel" layoutX="22.0" layoutY="445.0" text="My Ships">
+                                       <font>
+                                          <Font name="System Italic" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane fx:id="oceanGridWrappper1" centerShape="false" disable="true" gridLinesVisible="true" layoutX="39.0" layoutY="71.0" prefHeight="374.0" prefWidth="428.0" scaleShape="false">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <effect>
+                                          <DropShadow color="#3eb9ee" height="6.17" radius="2.585" width="6.17" />
+                                       </effect>
+                                       <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" pickOnBounds="false" prefHeight="36.0" prefWidth="40.0" style="-fx-background-color: #0095B6;" text="00" textAlignment="CENTER" textFill="#0095b6" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="02" textAlignment="CENTER" GridPane.columnIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="01" textAlignment="CENTER" GridPane.columnIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="10" textAlignment="CENTER" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="11" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="12" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="20" textAlignment="CENTER" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="21" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="03" textAlignment="CENTER" GridPane.columnIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="13" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="22" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="23" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="04" textAlignment="CENTER" GridPane.columnIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="14" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="05" textAlignment="CENTER" GridPane.columnIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="15" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="24" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="25" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="30" textAlignment="CENTER" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="31" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="32" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="33" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="34" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="35" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="36" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="26" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="16" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="06" textAlignment="CENTER" GridPane.columnIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="40" textAlignment="CENTER" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="41" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="42" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="43" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="44" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="45" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="46" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="07" textAlignment="CENTER" GridPane.columnIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="17" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="27" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="37" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="47" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="50" textAlignment="CENTER" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="51" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="52" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="53" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="54" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="55" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="56" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="57" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="08" textAlignment="CENTER" GridPane.columnIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="18" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="28" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="38" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="48" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="58" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="09" textAlignment="CENTER" GridPane.columnIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="19" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="29" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="39" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="49" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="59" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="60" textAlignment="CENTER" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="61" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="62" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="63" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="64" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="65" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="66" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="67" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="68" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="69" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="70" textAlignment="CENTER" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="71" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="72" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="73" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="74" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="75" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="76" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="77" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="78" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="79" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="80" textAlignment="CENTER" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="81" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="82" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="83" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="84" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="85" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="86" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="87" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="88" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="89" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="90" textAlignment="CENTER" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="91" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="92" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="93" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="94" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="95" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="96" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="97" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="98" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="99" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane disable="true" prefHeight="564.0" prefWidth="492.0">
+                                 <children>
+                                    <GridPane layoutX="26.0" layoutY="89.0" prefHeight="176.0" prefWidth="436.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="185.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="134.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="107.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Carrier, with five holes" />
+                                          <Label text="Battleship, with four holes" GridPane.rowIndex="1" />
+                                          <Label text="Cruiser, with three holes" GridPane.rowIndex="2" />
+                                          <Label text="Submarine, with three holes" GridPane.rowIndex="3" />
+                                          <Label text="Destroyer, with two holes" GridPane.rowIndex="4" />
+                                          <Button fx:id="carrier1" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="battleShip1" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="cruiser1" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="subMarine1" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="destroyer1" mnemonicParsing="false" onAction="#onSelectPosition" prefHeight="32.0" prefWidth="137.0" text="Select position" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane fx:id="oceanGridWrappper12" centerShape="false" disable="true" gridLinesVisible="true" layoutX="34.0" layoutY="286.0" prefHeight="374.0" prefWidth="428.0" scaleShape="false">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="-Infinity" prefWidth="40.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <effect>
+                                          <DropShadow color="#3eb9ee" height="6.17" radius="2.585" width="6.17" />
+                                       </effect>
+                                       <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" pickOnBounds="false" prefHeight="36.0" prefWidth="40.0" style="-fx-background-color: #0095B6;" text="00" textAlignment="CENTER" textFill="#0095b6" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="02" textAlignment="CENTER" GridPane.columnIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="01" textAlignment="CENTER" GridPane.columnIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="10" textAlignment="CENTER" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="11" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="12" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="20" textAlignment="CENTER" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="21" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="03" textAlignment="CENTER" GridPane.columnIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="13" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="22" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="23" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="04" textAlignment="CENTER" GridPane.columnIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="14" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="05" textAlignment="CENTER" GridPane.columnIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="15" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="24" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="25" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="30" textAlignment="CENTER" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="31" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="32" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="33" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="34" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="35" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="36" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="26" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="16" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="06" textAlignment="CENTER" GridPane.columnIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="40" textAlignment="CENTER" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="41" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="42" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="43" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="44" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="45" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="46" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="07" textAlignment="CENTER" GridPane.columnIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="17" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="27" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="37" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="47" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="50" textAlignment="CENTER" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="51" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="52" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="53" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="54" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="55" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="56" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="57" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="08" textAlignment="CENTER" GridPane.columnIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="18" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="28" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="38" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="48" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="58" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="09" textAlignment="CENTER" GridPane.columnIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="19" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="29" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="39" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="49" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="59" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="60" textAlignment="CENTER" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="61" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="62" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="63" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="64" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="65" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="66" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="67" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="68" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="69" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="70" textAlignment="CENTER" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="71" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="72" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="73" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="74" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="75" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="76" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="77" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="78" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="79" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="80" textAlignment="CENTER" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="81" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="82" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="83" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="84" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="85" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="86" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="87" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="88" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="89" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="90" textAlignment="CENTER" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="91" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="92" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="93" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="94" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="95" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="96" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="97" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="98" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSelect" prefHeight="36.0" prefWidth="40.0" style="-fx-border-width: 0; -fx-background-color: #0095B6;" text="99" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                    <Label fx:id="MyShipLabel1" layoutX="26.0" layoutY="61.0" text="Opponents Ships">
+                                       <font>
+                                          <Font name="System Italic" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </items>
+                  </SplitPane>
+               </center>
+               <bottom>
+                  <ButtonBar prefHeight="40.0" prefWidth="671.0" BorderPane.alignment="CENTER">
+                    <buttons>
+                        <Button fx:id="r" mnemonicParsing="false" onAction="#restartGame" text="New Game" />
+                      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="162.0" text="Play " />
+                        <Button mnemonicParsing="false" text="Exit" />
+                    </buttons>
+                  </ButtonBar>
+               </bottom>
+            </BorderPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
